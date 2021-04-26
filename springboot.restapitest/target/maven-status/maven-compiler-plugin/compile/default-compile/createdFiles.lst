@@ -1,0 +1,6 @@
+springboot\restapitest\service\ArraysService.class
+springboot\restapitest\model\ArrayRespuesta.class
+springboot\restapitest\repository\ArrayRepository.class
+springboot\restapitest\model\ArraysEntity.class
+springboot\restapitest\ApiRest.class
+springboot\restapitest\RestController\ArraysController.class
