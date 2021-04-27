@@ -104,12 +104,14 @@ public class ArraysController {
 		for (int q=0; q<qIteraciones; q++) {
 			B.clear();
 			if(A.isEmpty()) {
-				for(int j=arrayVasos.length-1; j>=0;j--) {
-						if(arrVasos[j] % numerosPrimos.get(q) ==0) {
-							B.add(arrVasos[j]);	
-						} else {
-							A.add(arrVasos[j]);
-						}
+				if(arrayVasos.length>0) {		
+					for(int j=arrayVasos.length-1; j>=0;j--) {
+							if(arrVasos[j] % numerosPrimos.get(q) ==0) {
+								B.add(arrVasos[j]);	
+							} else {
+								A.add(arrVasos[j]);
+							}
+					}
 				}
 			} else {
 				ArrayList<Integer> A= new ArrayList<Integer>();
@@ -121,7 +123,11 @@ public class ArraysController {
 					}
 				}
 				this.A.clear();
-				this.A=A;
+				if(!A.isEmpty()) {
+					this.A=A;
+				} else {
+					arrayVasos = new String[0];
+				}
 			}
 			for(int b=0; b<B.size(); b++) {
 				respuesta.add(B.get(b));
@@ -129,10 +135,12 @@ public class ArraysController {
 
 		}
 		int i =0;
-		do {
-			respuesta.add(A.get(i));
-			i++;
-		} while (i<this.A.size());
+		if(!A.isEmpty()) {
+			do {
+				respuesta.add(A.get(i));
+				i++;
+			} while (i<this.A.size());
+		}
 		
 		return respuesta;
 	}
