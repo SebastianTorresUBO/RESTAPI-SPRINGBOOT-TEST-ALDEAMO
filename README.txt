@@ -1,7 +1,7 @@
-Toda la logica del ejercicio de arrays esta principalmente en el componente ArrayController.java de la ruta 
-/springboot.restapitest/src/main/java/springboot/restapitest/RestController/
+La logica de los end-point del ejercicio de arrays esta en el componente ArrayController.java , asi como tambien la logica de los vectores A, numeros primos, B y el vector resultado
+en la ruta  /springboot.restapitest/src/main/java/springboot/restapitest/RestController/
 
-El servicio esta construido en Spring Boot 
+El servicio esta construido en Spring Boot version 1.5.4 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
